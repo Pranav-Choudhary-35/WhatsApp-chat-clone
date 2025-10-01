@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watsapp chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>All Chats</h1>
+
+
+
+<% for (let chat of chats) { %>
+  <div class="chat">
+    <p>From: <i><%= chat.from %></i></p>
+    <div class="msg">
+      <p><%= chat.msg %></p>
+      <form method="GET" action="/chats/<%= chat._id %>/edit">
+    <button class="edit">edit</button>
+    </form>
+    
+     <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
+    <button class="delete">Delete</button>
+    </form>
+    </div>
+    <p>Received by: <i><%= chat.to %></i></p>
+    <hr>
+<% if (chat.created_at) { %>
+  <p><%= chat.created_at.toLocaleString() %></p>
+<% } else { %>
+  <p style="color:red;">Timestamp missing</p>
+<% } %>
+
+</div>
+  <br><br>
+<% } %>
+<form method="GET" action="chats/new">
+  <button class="edit">New chat</button>
+</form>
+<br>
+
+</body>
+</html>
+
+
+

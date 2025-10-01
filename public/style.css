@@ -1,0 +1,84 @@
+/* Base styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #25d366;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.edit {
+  background-color: #128c7e;
+  margin-right: 10px;
+}
+
+button.delete {
+  background-color: #d32f2f;
+}
+
+form {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Chat container */
+.chat {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* Message bubble */
+.msg {
+  background-color: #25d366;
+  color: #000;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+/* Text styling */
+.chat p {
+  margin: 5px 0;
+}
+
+.chat i {
+  color: #a0a0a0;
+}
+
+/* Timestamp */
+.chat hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 10px 0;
+}
+
+.chat p:last-child {
+  font-size: 12px;
+  color: #888;
+  text-align: right;
+}
